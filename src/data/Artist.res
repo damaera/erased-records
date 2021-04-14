@@ -17,6 +17,14 @@ let toSlug = t =>
   | Erased => "erased"
   | Craftuner => "vamaera"
   }
+let fromSlug = t =>
+  switch t {
+  | "reverse-project" => Some(ReverseProject)
+  | "vamaera" => Some(Vamaera)
+  | "sailstory" => Some(SailStory)
+  | "erased" => Some(Erased)
+  | _ => None
+  }
 
 type linkT =
   | Website(string)
@@ -29,12 +37,23 @@ type linkT =
 
 let toLinks = t =>
   switch t {
-  | ReverseProject => [Website("https://www.reverse-project.com"), Facebook("ReverseProject00")]
-  | Vamaera => [Facebook("vamaera")]
-  | SailStory => []
-  | Erased => []
-  | Craftuner => []
+  | ReverseProject => [
+      Spotify("0mRlrrhtRm6hUDXwcEkPr4"),
+      Youtube("UCoGRDkYKjgvbx_tXn9npPMA"),
+      Website("https://www.reverse-project.com"),
+      Facebook("ReverseProject00"),
+    ]
+  | Vamaera => [
+      Spotify("6Rvh2MfORbZ80GDUfqjLRY"),
+      Youtube("UC7-IzVFpYk8ckbKHu_89QPw"),
+      Facebook("vamaera"),
+    ]
+  | SailStory => [Spotify("1mB6ELrIfbMFiSKvYdIUOP"), Youtube("UC41zSm5CajGPcj1B9JXGIzw")]
+  | Erased => [Spotify("1e8RkloxtkrsFR3vIOG4Ki"), Youtube("UCgSCfQLsA7NEdiM6RTxhT4Q")]
+  | Craftuner => [Spotify("")]
   }
+
+let all = [ReverseProject, Vamaera, SailStory, Erased]
 
 module Featured = {
   type t = Aika | Mayuko | Giita | Taobien | HatsuneMiku | Djalto | LeaAnsella | Est | Friday

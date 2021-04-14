@@ -15,7 +15,7 @@ let make = () => {
       <p>
         {"Every song in Erased records has deep story behind it,"->React.string}
         <br />
-        {"Create a world through a song"->React.string}
+        {"Create a world through music"->React.string}
       </p>
       <Next.Link href="/releases">
         <a> <button className={styles["button"]}> {"All Releases"->React.string} </button> </a>

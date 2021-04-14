@@ -1,0 +1,20 @@
+.container {
+  padding: 20px;
+  background-color: #16161c;
+  margin: 20px;
+}
+
+.link {
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.title {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.link-wrapper {
+  display: flex;
+  align-items: center;
+}
