@@ -1,21 +1,20 @@
-// let getStaticProps = () => {
-//   // Call an external API endpoint to get posts
-//   let artists = Artist.all
+let getStaticPaths: Next.GetStaticPaths.t<{
+  "artist": string,
+}> = () => {
+  open Next.GetStaticPaths
+  {
+    paths: Artist.all->Belt.Array.map(artist => {params: {"artist": artist->Artist.toSlug}}),
+    fallback: false,
+  }->Js.Promise.resolve
+}
 
-//   // By returning { props: { posts } }, the Blog component
-//   // will receive `posts` as a prop at build time
-//   return {
-//     props: {
-//       posts,
-//     },
-//   }
-// }
+let getStaticProps: Next.GetStaticProps.t<{"artistSlug": string}, {"artist": string}> = context => {
+  let artistSlug = context.params["artist"]
+  {"props": {"artistSlug": artistSlug}}->Js.Promise.resolve
+}
 
 @react.component
-let make = () => {
-  let router = Next.Router.useRouter()
-
-  let artistSlug = router.query->Js.Dict.get("artist")
+let make = (~artistSlug) => {
   let releases = switch artistSlug {
   | None => Release.latest
   | Some(artistSlug) =>
@@ -24,12 +23,12 @@ let make = () => {
     | None => Release.latest
     }
   }
-
   <Page>
     <br />
     <h1 className="tac mono"> {" Releases"->React.string} </h1>
     <br />
     <TrackCard.Wrapper>
+      <div />
       {releases
       ->Belt.Array.map(track => {
         //
