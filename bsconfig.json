@@ -1,0 +1,26 @@
+{
+  "name": "erased-web",
+  "version": "0.0.1",
+  "namespace": "erased-web",
+  "reason": {
+    "react-jsx": 3
+  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    }
+  ],
+  "package-specs": {
+    "module": "es6",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "bs-dependencies": [
+    "@rescript/react"
+  ],
+  "bs-dev-dependencies": [],
+  "warnings": {
+    "error": "+101"
+  }
+}

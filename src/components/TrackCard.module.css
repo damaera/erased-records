@@ -1,0 +1,48 @@
+.container {
+  padding: 24px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.content {
+  padding: 20px;
+  background: #16161c;
+}
+
+.title {
+  font-size: 16px;
+  padding-bottom: 6px;
+  font-weight: 700;
+}
+
+.artist {
+  font-size: 14px;
+  opacity: .8;
+}
+
+.type {
+  padding-top: 12px;
+  text-transform: uppercase;
+  /* font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; */
+  font-size: 10px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.type span {
+  padding-right: 16px;
+}

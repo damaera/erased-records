@@ -1,0 +1,38 @@
+.wrapper {
+  position: sticky;
+  top: 0;
+  padding: 0px;
+  background: #000;
+  z-index: 10;
+}
+
+.text {
+  text-align: center;
+  font-weight: 900;
+  margin-bottom: 20px;
+  transition: all .1s;
+}
+
+.text:hover {
+  letter-spacing: 3px;
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.menu-item {
+  padding: 15px;
+  opacity: .6;
+}
+
+.menu-item.active {
+  opacity: .9;
+}
+
+.menu-item:hover {
+  opacity: 1;
+}
