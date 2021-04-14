@@ -10,7 +10,9 @@ let make = () => {
         <Next.Link href={`/a/${artist->Artist.toSlug}`}>
           <a>
             <div className={styles["container"]}>
-              <h2 className={styles["title"]}> {artist->Artist.toName->React.string} </h2>
+              <h2 className={styles["title"] ++ " mono"}>
+                {artist->Artist.toName->React.string}
+              </h2>
               <div className={styles["link-wrapper"]}>
                 {artist
                 ->Artist.toLinks
@@ -38,6 +40,13 @@ let make = () => {
         </Next.Link>
       })
       ->React.array}
+      <Next.Link href={`/contact`}>
+        <a>
+          <div className={styles["container"]}>
+            <h2 className={styles["title"]}> {"Wanna join?"->React.string} </h2>
+          </div>
+        </a>
+      </Next.Link>
     </div>
   </Page>
 }
