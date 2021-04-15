@@ -19,6 +19,8 @@ let make = (
       <title> {title->React.string} </title>
       <meta name="title" content=title />
       <meta name="description" content=description />
+      //
+      <meta name="theme-color" content="#000000" />
       // facebook
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://erasedrecords.com" />
