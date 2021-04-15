@@ -7,7 +7,7 @@ let make = () => {
     <div className="wrap-center">
       <div className={styles["planets"]}>
         //
-        <video autoPlay=true loop=true>
+        <video autoPlay=true loop=true playsInline=true>
           <source src="/planets.webm" type_="video/webm" />
           <source src="/planets.mp4" type_="video/mp4" />
         </video>
