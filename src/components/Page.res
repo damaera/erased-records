@@ -3,7 +3,7 @@
 
 let defaultTitle = `Erased Records — Beyond music, create a world`
 let defaultDescription = "Every song in Erased records has deep story behind it, Create a world through music"
-let defaultImage = "/erased-records-meta.png"
+let defaultImage = "/Erased-records-meta.png"
 
 @react.component
 let make = (
