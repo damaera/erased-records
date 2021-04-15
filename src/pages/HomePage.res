@@ -5,9 +5,12 @@
 let make = () => {
   <Page>
     <div className="wrap-center">
-      <div className="planets">
+      <div className={styles["planets"]}>
         //
-        <img src="/planets.gif" width="400" height="400" />
+        <video autoPlay=true loop=true>
+          <source src="/planets.webm" type_="video/webm" />
+          <source src="/planets.mp4" type_="video/mp4" />
+        </video>
       </div>
     </div>
     <div className={styles["content"]}>

@@ -9,6 +9,10 @@
   opacity: .8;
 }
 
+.planets {
+  transform: rotate(-10deg)
+}
+
 .button {
   margin-top: 16px;
   padding: 16px 32px;
