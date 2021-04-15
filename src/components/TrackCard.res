@@ -7,11 +7,11 @@ let make = (~track: Release.t) => {
 
   let artists = switch feat {
   | [] =>
-    <Next.Link href={`/artist/${artist->Artist.toSlug}`}>
+    <Next.Link href={`/a/${artist->Artist.toSlug}`}>
       <a> {artist->Artist.toName->React.string} </a>
     </Next.Link>
   | arr => <>
-      <Next.Link href={`/artist/${artist->Artist.toSlug}`}>
+      <Next.Link href={`/a/${artist->Artist.toSlug}`}>
         <a className="link-underline"> {artist->Artist.toName->React.string} </a>
       </Next.Link>
       <span style={ReactDOM.Style.make(~opacity="0.5", ())}> {" feat. "->React.string} </span>
