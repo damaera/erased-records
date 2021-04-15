@@ -46,9 +46,16 @@ let make = () => {
     ->React.array
 
   <div className={styles["wrapper"]}>
-    <h2 className={styles["text"]}>
-      <Next.Link href={`/`}> <a> <s> {"- Erased -"->React.string} </s> </a> </Next.Link>
-    </h2>
+    <div className={styles["logo-wrapper"]}>
+      <Next.Link href={`/`}>
+        <a>
+          <img src="/erased-records-logo.svg" alt="Erased Records logo" width="60" height="60" />
+        </a>
+      </Next.Link>
+      <h2 className={styles["text"]}>
+        <Next.Link href={`/`}> <a> {" Erased Records "->React.string} </a> </Next.Link>
+      </h2>
+    </div>
     <nav className={styles["menu"]}> {renderRoutes} </nav>
   </div>
 }
